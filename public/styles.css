@@ -33,8 +33,10 @@ h1 { max-width: 11ch; font-size: clamp(3.5rem, 6.3vw, 5.8rem); line-height: 1.02
 .hero-lede { max-width: 31rem; margin-top: 1.7rem; font-size: clamp(1.1rem, 1.5vw, 1.3rem); }
 .hero-note { margin-top: 1rem; color: var(--muted); }
 .command-example { min-width: 0; padding: 1.5rem; border-left: 3px solid var(--accent); background: var(--surface); }
-.command-example pre { white-space: pre-wrap; overflow-wrap: anywhere; padding-bottom: 0; }
-.command-output { display: inline-block; max-width: 100%; overflow: hidden; color: #b9dc98; font-size: .72rem; text-overflow: ellipsis; white-space: nowrap; vertical-align: bottom; }
+.command-example pre { white-space: pre-wrap; overflow-wrap: normal; padding-bottom: 0; }
+.command-output { display: flex; max-width: 100%; overflow: hidden; color: #b9dc98; font-size: .72rem; white-space: nowrap; }
+.command-output .json-fields { min-width: 0; overflow: hidden; text-overflow: ellipsis; color: inherit; }
+.command-output .json-end { flex: none; color: inherit; }
 .command-label, .example-label { color: var(--muted); font-size: .9rem; }
 pre { overflow-x: auto; padding-block: 1.4rem; font-size: .88rem; line-height: 1.7; }
 pre span { color: var(--accent); }
