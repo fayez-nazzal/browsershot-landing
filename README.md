@@ -27,7 +27,6 @@ npm run audit
 
 ## Deployment
 
-Commits are deployed with Cloudflare Workers Static Assets through the Cloudflare API, using
-the `assets` directory and `browsershot.dev` custom domain declared in `wrangler.jsonc`.
-`npm run deploy` performs the equivalent upload with Wrangler when a local deployment is
-wanted.
+Commits are deployed with Cloudflare Workers Static Assets using the `assets` directory
+and `browsershot.dev` custom domain declared in `wrangler.jsonc`. After authenticating
+Wrangler, run `npm run deploy`.
