@@ -7,7 +7,7 @@ Static landing page for [Browsershot](https://github.com/fayez-nazzal/browsersho
 
 The header, browser favicon, and Apple touch icon use the same simplified mark.
 The favicon SVG is the source for the PNG icons and social card mark.
-The page describes capture workflows for pull requests, coding agents, and audit records.
+The page describes capture workflows for pull requests, coding agents, audit records, and authenticated pages.
 Paragraphs use CSS pretty wrapping, and headings use balanced wrapping where supported.
 
 ## Local development

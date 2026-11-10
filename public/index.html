@@ -47,7 +47,7 @@
       <div class="command-example" aria-label="Example command">
         <p class="command-label">Capture a page</p>
         <pre><code><span aria-hidden="true">$ </span>browsershot https://example.com --json
-<span class="command-output"># {"outputPath":"/…/page.png"}</span></code></pre>
+<span class="command-output"># {"outputPath":"…","sha256":"…","bytes":12345}</span></code></pre>
       </div>
     </section>
 
@@ -74,9 +74,9 @@
         <h2 id="uses-title">More reasons to capture</h2>
       </div>
       <dl class="feature-list">
-        <div><dt>Pull requests</dt><dd>Capture screenshots for reviewers without repeating the work by hand. Group related captures under a PR name.</dd></div>
+        <div><dt>Pull requests</dt><dd>Capture screenshots for reviewers without repeating the work by hand.</dd></div>
         <div><dt>Repeatable agent work</dt><dd>Give your agent a capture command instead of writing browser scripts or driving a desktop browser. It can save time and tokens.</dd></div>
-        <div><dt>Evidence and records</dt><dd>Capture screenshots for compliance reviews, audits, or other records. A screenshot alone does not establish compliance.</dd></div>
+        <div><dt>Evidence and records</dt><dd>Capture screenshots for compliance reviews, audits, or other records.</dd></div>
       </dl>
     </section>
 
@@ -88,9 +88,23 @@
       <dl class="feature-list">
         <div><dt>Pages and elements</dt><dd>Capture a whole page or a selected element. Wait for text or an element before capturing.</dd></div>
         <div><dt>Browser errors and requests</dt><dd>Collect console errors, page exceptions or network activity when you need to investigate.</dd></div>
-        <div><dt>Component libraries</dt><dd>Capture named Storybook and Ladle examples. Catalogs are cached and can be refreshed.</dd></div>
-        <div><dt>Saved pages</dt><dd>Reuse routes, settings and named elements. Authentication is available when needed.</dd></div>
+        <div><dt>Component libraries</dt><dd>Capture named Storybook and Ladle examples.</dd></div>
+        <div><dt>Saved pages</dt><dd>Reuse routes, settings and named elements.</dd></div>
       </dl>
+    </section>
+
+    <section class="example-section" aria-labelledby="auth-title">
+      <div class="wrap example-layout">
+        <div class="example-copy">
+          <h2 id="auth-title">Capture authenticated pages</h2>
+          <p>Capture pages behind a login using a named user.</p>
+        </div>
+        <div class="example-detail">
+          <p class="example-label">After setting up Authstate</p>
+          <pre><code><span aria-hidden="true">$ </span>browsershot https://app.example \
+    --auth-user member</code></pre>
+        </div>
+      </div>
     </section>
 
     <section class="closing wrap" aria-labelledby="closing-title">
