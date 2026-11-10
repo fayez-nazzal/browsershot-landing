@@ -3,87 +3,92 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Browsershot — Browser verification for AI agents</title>
-  <meta name="description" content="Give coding agents browser evidence to verify UI changes, investigate errors, and keep building. An open-source CLI for visual and structured feedback.">
+  <title>Browsershot | Browser checks for coding agents</title>
+  <meta name="description" content="Capture pages, inspect elements and collect browser errors from the command line. Browsershot gives coding agents evidence to check their work.">
   <link rel="canonical" href="https://browsershot.dev/">
   <meta name="theme-color" content="#101512">
+  <link rel="icon" href="/favicon.png" type="image/png" sizes="192x192">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Browsershot">
   <meta property="og:url" content="https://browsershot.dev/">
-  <meta property="og:title" content="Browsershot — Browser verification for AI agents">
-  <meta property="og:description" content="Give coding agents browser evidence to verify UI changes, investigate errors, and keep building. An open-source CLI for visual and structured feedback.">
+  <meta property="og:title" content="Browsershot | Browser checks for coding agents">
+  <meta property="og:description" content="Capture pages, inspect elements and collect browser errors from the command line.">
   <meta property="og:image" content="https://browsershot.dev/social.png">
   <meta property="og:image:type" content="image/png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Browsershot: browser evidence for the agent loop.">
+  <meta property="og:image:alt" content="Browsershot. Let your agent see what it built.">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Browsershot — Browser verification for AI agents">
-  <meta name="twitter:description" content="Give coding agents browser evidence to verify UI changes, investigate errors, and keep building. An open-source CLI for visual and structured feedback.">
+  <meta name="twitter:title" content="Browsershot | Browser checks for coding agents">
+  <meta name="twitter:description" content="Capture pages, inspect elements and collect browser errors from the command line.">
   <meta name="twitter:image" content="https://browsershot.dev/social.png">
-  <meta name="twitter:image:alt" content="Browsershot: browser evidence for the agent loop.">
+  <meta name="twitter:image:alt" content="Browsershot. Let your agent see what it built.">
   <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
-    <div class="header-inner">
-      <a class="brand" href="/" aria-label="Browsershot home"><span class="brand-mark" aria-hidden="true">⌁</span> browsershot<span class="brand-dot">.</span></a>
-      <nav aria-label="On this page"><a href="#loop">The loop</a><a href="#capabilities">Capabilities</a></nav>
+    <div class="header-inner wrap">
+      <a class="brand" href="/" aria-label="Browsershot home"><img src="/favicon.svg" width="32" height="32" alt="">browsershot</a>
+      <nav aria-label="On this page"><a href="#example">Example</a><a href="#features">Features</a></nav>
       <a class="header-cta" href="https://github.com/fayez-nazzal/browsershot#get-started">Get started <span aria-hidden="true">↗</span></a>
     </div>
   </header>
 
   <main id="main">
     <section class="hero wrap" aria-labelledby="hero-title">
-      <div class="hero-copy">
-        <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> OPEN SOURCE · BUILT FOR AGENTS</p>
-        <h1 id="hero-title">Build it.<br>See it.<br><span>Verify it.</span></h1>
-        <p class="hero-lede">Give your agent browser evidence to check its work, investigate what went wrong, and keep going.</p>
-        <p class="hero-note">A browser verification layer for AI agents and developers.</p>
+      <div>
+        <p class="intro-label">Open source browser checks</p>
+        <h1 id="hero-title">Let your agent see what it built.</h1>
+        <p class="hero-lede">So it can visually understand, verify and achieve goals.</p>
+        <p class="hero-note">Browsershot captures pages and browser state from the command line.</p>
       </div>
-      <div class="hero-visual">
-        <div class="terminal" aria-label="Example terminal command">
-          <div class="terminal-bar"><span class="terminal-dots" aria-hidden="true"><i></i><i></i><i></i></span><span>terminal</span><span>01 / CAPTURE</span></div>
-          <div class="terminal-body"><p class="terminal-label">Start with a page</p><pre><code><span aria-hidden="true" class="prompt">$ </span>browsershot https://example.com</code></pre><div class="terminal-rule"></div><p class="terminal-hint">Visual evidence <span>+</span> structured context</p></div>
+      <div class="command-example" aria-label="Example command">
+        <p class="command-label">Capture a page</p>
+        <pre><code><span aria-hidden="true">$ </span>browsershot https://example.com</code></pre>
+        <p class="command-note">Returns the path to a screenshot.</p>
+      </div>
+    </section>
+
+    <section class="example-section" id="example" aria-labelledby="example-title">
+      <div class="wrap example-layout">
+        <div class="example-copy">
+          <h2 id="example-title">Check the page as it runs</h2>
+          <p>Capture a page after an action and inspect an element in the same run. Your agent can use the results to decide what to fix next.</p>
         </div>
-        <p class="visual-caption"><span aria-hidden="true">↳</span> One command. A clearer picture of what ran.</p>
+        <div class="example-detail">
+          <p class="example-label">For example, open a menu and inspect it</p>
+          <pre><code><span aria-hidden="true">$ </span>browsershot https://app.example \
+    --act 'click:#menu' --inspect '#menu' --json</code></pre>
+          <div class="result-list">
+            <p><strong>Screenshot</strong><span>See the page after the action.</span></p>
+            <p><strong>JSON</strong><span>Read the inspected element and capture details.</span></p>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="loop-section" id="loop" aria-labelledby="loop-title">
-      <div class="wrap loop-inner">
-        <div class="section-heading"><p class="eyebrow">01 / THE FEEDBACK LOOP</p><h2 id="loop-title">Don’t stop at<br><span>“it should work.”</span></h2><p>From a design implementation to a tricky bug, give the agent a way to check the running UI.</p></div>
-        <ol class="steps">
-          <li><span class="step-number">01</span><div><h3>Build</h3><p>Make the change.</p></div></li>
-          <li><span class="step-number">02</span><div><h3>Observe</h3><p>Capture the page and inspect its state.</p></div></li>
-          <li><span class="step-number">03</span><div><h3>Keep going</h3><p>Use the evidence to adjust and check again.</p></div></li>
-        </ol>
-        <p class="section-footnote">Your agent decides when the goal is met. Browsershot provides the evidence.</p>
+    <section class="features wrap" id="features" aria-labelledby="features-title">
+      <div class="features-heading">
+        <h2 id="features-title">More ways to check</h2>
+        <p>Use what fits the task. Each option works with a capture.</p>
       </div>
-    </section>
-
-    <section class="capabilities wrap" id="capabilities" aria-labelledby="capabilities-title">
-      <div class="section-top"><div><p class="eyebrow">02 / THE TOOLKIT</p><h2 id="capabilities-title">More context.<br><span>Better next steps.</span></h2></div><p>Visual feedback is only the beginning. Bring the surrounding browser context into the same workflow.</p></div>
-      <ul class="feature-grid">
-        <li><span class="feature-index">01 / VIEW</span><h3>Pages or elements</h3><p>Capture the whole page or a specific visible element.</p><code>--full-page · --element</code></li>
-        <li><span class="feature-index">02 / INTERACT</span><h3>Real UI states</h3><p>Wait, click, type, hover, or press before capture.</p><code>--expect-element · --act</code></li>
-        <li><span class="feature-index">03 / INSPECT</span><h3>State, not guesses</h3><p>Inspect elements and attributes. Return results as JSON.</p><code>--inspect · --json</code></li>
-        <li><span class="feature-index">04 / DEBUG</span><h3>See what failed</h3><p>Optionally collect console exceptions and network activity.</p><code>--with-errors · --with-api</code></li>
-        <li><span class="feature-index">05 / COMPONENTS</span><h3>Capture from the catalog</h3><p>Find and capture named Storybook or Ladle examples.</p><code>library list · library refresh</code></li>
-        <li><span class="feature-index">06 / REUSE</span><h3>Come back to a state</h3><p>Save pages and defaults. Add authentication when needed.</p><code>page · config · --auth</code></li>
-      </ul>
-      <p class="catalog-note">Library catalogs are cached; refresh them when examples change.</p>
+      <dl class="feature-list">
+        <div><dt>Pages and elements</dt><dd>Capture a whole page or a selected element. Wait for text or an element before capturing.</dd></div>
+        <div><dt>Browser errors and requests</dt><dd>Collect console errors, page exceptions or network activity when you need to investigate.</dd></div>
+        <div><dt>Component libraries</dt><dd>Capture named Storybook and Ladle examples. Catalogs are cached and can be refreshed.</dd></div>
+        <div><dt>Saved pages</dt><dd>Reuse routes, settings and named elements. Authentication is available when needed.</dd></div>
+      </dl>
     </section>
 
     <section class="closing wrap" aria-labelledby="closing-title">
-      <p class="eyebrow">OPEN SOURCE · MIT LICENSE</p>
-      <h2 id="closing-title">Give your agent<br><span>the missing feedback.</span></h2>
-      <p>Install from source with Bun and Git, a Chromium download, and a local build. The GitHub guide has the steps.</p>
+      <h2 id="closing-title">Free and open source</h2>
+      <p>Install from source with Bun and Git, a Chromium download and a local build. The GitHub guide has the steps.</p>
     </section>
   </main>
 
-  <footer class="site-footer"><div class="wrap footer-inner"><p><strong>browsershot<span class="brand-dot">.</span></strong> <span>Browser evidence, on demand.</span></p><p><a href="https://github.com/fayez-nazzal/browsershot">Source</a><a href="https://github.com/fayez-nazzal/browsershot/blob/main/LICENSE">MIT license</a></p></div></footer>
+  <footer class="site-footer"><div class="wrap footer-inner"><p>Browsershot</p><p><a href="https://github.com/fayez-nazzal/browsershot">Source</a><a href="https://github.com/fayez-nazzal/browsershot/blob/main/LICENSE">MIT license</a></p></div></footer>
 </body>
 </html>

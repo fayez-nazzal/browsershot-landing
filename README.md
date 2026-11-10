@@ -5,6 +5,9 @@ Static landing page for [Browsershot](https://github.com/fayez-nazzal/browsersho
 
 `public/` is the deployment; there is no build step and no runtime dependency.
 
+The header, browser favicon, and Apple touch icon use the same simplified mark.
+The favicon SVG is the source for the PNG icons and social card mark.
+
 ## Local development
 
 ```sh
