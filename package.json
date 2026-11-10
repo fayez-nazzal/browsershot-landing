@@ -1,0 +1,20 @@
+{
+  "name": "browsershot-landing",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Landing page for the Browsershot command-line screenshot tool.",
+  "license": "MIT",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "audit": "lighthouse http://localhost:8787/ --chrome-flags=\"--headless=new\""
+  },
+  "devDependencies": {
+    "lighthouse": "13.6.0",
+    "wrangler": "4.160.0"
+  },
+  "allowScripts": {
+    "esbuild@0.28.2": true,
+    "workerd@1.20261110.1": true
+  }
+}
