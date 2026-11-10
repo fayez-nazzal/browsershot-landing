@@ -40,15 +40,14 @@
   <main id="main">
     <section class="hero wrap" aria-labelledby="hero-title">
       <div>
-        <p class="intro-label">Open source browser checks</p>
         <h1 id="hero-title">Let your agent see what it built.</h1>
-        <p class="hero-lede">So it can visually understand, verify and achieve goals.</p>
+        <p class="hero-lede">So it can visually understand, verify, and react by itself, to achieve your goals.</p>
         <p class="hero-note">Browsershot captures pages and browser state from the command line.</p>
       </div>
       <div class="command-example" aria-label="Example command">
         <p class="command-label">Capture a page</p>
-        <pre><code><span aria-hidden="true">$ </span>browsershot https://example.com</code></pre>
-        <p class="command-note">Returns the path to a screenshot.</p>
+        <pre><code><span aria-hidden="true">$ </span>browsershot https://example.com --json
+<span class="command-output"># partial: {"outputPath":"/…/page.png"}</span></code></pre>
       </div>
     </section>
 
@@ -68,6 +67,17 @@
           </div>
         </div>
       </div>
+    </section>
+
+    <section class="features use-cases wrap" aria-labelledby="uses-title">
+      <div class="features-heading">
+        <h2 id="uses-title">More reasons to capture</h2>
+      </div>
+      <dl class="feature-list">
+        <div><dt>Pull requests</dt><dd>Capture screenshots for reviewers without repeating the work by hand. Group related captures under a PR name.</dd></div>
+        <div><dt>Repeatable agent work</dt><dd>Give your agent a capture command instead of writing browser scripts or driving a desktop browser. It can save time and tokens.</dd></div>
+        <div><dt>Evidence and records</dt><dd>Capture screenshots for compliance reviews, audits, or other records. A screenshot alone does not establish compliance.</dd></div>
+      </dl>
     </section>
 
     <section class="features wrap" id="features" aria-labelledby="features-title">
