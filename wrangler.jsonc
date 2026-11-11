@@ -7,5 +7,8 @@
     "html_handling": "auto-trailing-slash",
     "not_found_handling": "404-page"
   },
-  "routes": [{ "pattern": "browsershot.dev", "custom_domain": true }]
+  "routes": [
+    { "pattern": "browsershot.dev", "custom_domain": true },
+    { "pattern": "mta-sts.browsershot.dev", "custom_domain": true }
+  ]
 }

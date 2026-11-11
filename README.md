@@ -43,14 +43,25 @@ npm run audit
 ## Discovery and disclosure
 
 `public/robots.txt` permits crawling and points to the sitemap. `public/llms.txt`
-provides product context for AI tools, while `public/ai.txt` describes crawler
-guidance (it is informational, not a replacement for robots.txt). `public/humans.txt`
+provides product context for AI tools and is linked from the homepage with
+`rel="describedby"`. `public/ai.txt` describes crawler guidance (it is
+informational, not a replacement for robots.txt). `public/humans.txt`
 links to project contributors, and `public/ads.txt` declares no authorized ad sellers.
 `public/.well-known/security.txt` links to the private vulnerability reporting policy;
 review its expiry and contact regularly.
 
+## Legal and email policies
+
+`public/privacy.html` and `public/terms.html` are adapted from GitHub's CC BY 4.0
+site policies, with source attribution included in each page. Review them when the
+site's functionality or data practices change.
+
+`public/.well-known/mta-sts.txt` declares no inbound mail policy because the domain
+has Null MX and does not accept email. The `mta-sts.browsershot.dev` custom domain
+serves the policy; keep its DNS TXT record ID synchronized if the policy changes.
+
 ## Deployment
 
 Commits are deployed with Cloudflare Workers Static Assets using the `assets` directory
-and `browsershot.dev` custom domain declared in `wrangler.jsonc`. After authenticating
-Wrangler, run `npm run deploy`.
+and custom domains declared in `wrangler.jsonc`. After authenticating Wrangler, run
+`npm run deploy`.

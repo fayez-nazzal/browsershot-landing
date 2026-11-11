@@ -56,9 +56,27 @@ h2 { font-size: clamp(2rem, 3.5vw, 3.2rem); line-height: 1.12; letter-spacing: -
 .feature-list dd { color: var(--muted); font-size: .94rem; }
 .closing { padding-block: 4.5rem; border-top: 1px solid var(--border); }
 .closing h2 { font-size: clamp(1.6rem, 2.6vw, 2.2rem); }
+.legal { max-width: 800px; padding-block: 4rem 6rem; }
+.legal-header { padding-bottom: 3rem; border-bottom: 1px solid var(--border); }
+.legal h1 { max-width: none; font-size: clamp(2.6rem, 6vw, 4.5rem); }
+.legal-date { margin-top: 1rem; color: var(--muted); }
+.legal-header > p:last-child { margin-top: 1.5rem; font-size: 1.1rem; }
+.legal-toc { padding-block: 2rem; border-bottom: 1px solid var(--border); }
+.legal-toc h2 { font-size: 1.25rem; letter-spacing: -.02em; }
+.legal-toc ol { columns: 2; padding-left: 1.5rem; margin: 1rem 0 0; }
+.legal-toc li { margin-bottom: .5rem; padding-left: .25rem; }
+.legal-body section { padding-top: 2.5rem; }
+.legal-body h2 { font-size: clamp(1.5rem, 3vw, 2rem); letter-spacing: -.03em; }
+.legal-body h3 { margin: 1.5rem 0 .5rem; font-size: 1.05rem; }
+.legal-body p, .legal-body ul { margin-top: 1rem; }
+.legal-body ul { padding-left: 1.5rem; }
+.legal-body li { margin-top: .5rem; padding-left: .25rem; }
+.legal-body a, .legal-toc a { color: var(--accent); }
+.legal-caps { font-size: .94rem; }
+.legal-attribution { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border); color: var(--muted); font-size: .85rem; }
 .site-footer { border-top: 1px solid var(--border); }
 .footer-inner { display: flex; justify-content: space-between; gap: 1rem; padding-block: 1.8rem; color: var(--muted); font-size: .9rem; }
-.footer-inner p:last-child { display: flex; gap: 1.5rem; }
+.footer-inner p:last-child { display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; }
 .not-found { padding-block: 7rem; }
 .not-found h1 { max-width: none; }
 .not-found p { margin-top: 1.2rem; }
@@ -80,6 +98,8 @@ h2 { font-size: clamp(2rem, 3.5vw, 3.2rem); line-height: 1.12; letter-spacing: -
   .result-list p { grid-template-columns: 6.5rem 1fr; }
   .closing { padding-block: 3.5rem; }
   .footer-inner { flex-wrap: wrap; }
+  .legal { padding-block: 3rem 4rem; }
+  .legal-toc ol { columns: 1; }
 }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }

@@ -11,4 +11,6 @@ It can capture screenshots of pages or elements, interact with pages, inspect el
 - [Source code](https://github.com/fayez-nazzal/browsershot): Project repository, issues, and contributions.
 - [Agent instructions](https://github.com/fayez-nazzal/browsershot/blob/main/AGENTS.md): Operational guidance for coding agents.
 - [License](https://github.com/fayez-nazzal/browsershot/blob/main/LICENSE): MIT license.
+- [Privacy Policy](https://browsershot.dev/privacy): Personal data practices for the website and project.
+- [Terms of Service](https://browsershot.dev/terms): Website and software usage terms.
 - [Security policy](https://github.com/fayez-nazzal/browsershot/blob/main/SECURITY.md): Private vulnerability reporting.

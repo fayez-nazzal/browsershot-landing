@@ -3,4 +3,10 @@
   <url>
     <loc>https://browsershot.dev/</loc>
   </url>
+  <url>
+    <loc>https://browsershot.dev/privacy</loc>
+  </url>
+  <url>
+    <loc>https://browsershot.dev/terms</loc>
+  </url>
 </urlset>
