@@ -1,0 +1,5 @@
+/* PROJECT */
+Browsershot
+Source and contributors: https://github.com/fayez-nazzal/browsershot
+Landing page: https://browsershot.dev/
+License: https://github.com/fayez-nazzal/browsershot/blob/main/LICENSE

@@ -26,10 +26,28 @@ behavior, including the 404 page.
 ```sh
 curl -s -o /dev/null -w '%{http_code}\n' http://localhost:8787/
 curl -s -o /dev/null -w '%{http_code}\n' http://localhost:8787/does-not-exist
+curl -sI http://localhost:8787/ | grep -Ei 'content-security-policy|x-frame-options|referrer-policy'
 npm run audit
 ```
 
 `npm run audit` runs Lighthouse against the running local server.
+
+## Security headers
+
+`public/_headers` applies security headers to every static asset response:
+
+- `Content-Security-Policy: default-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'`
+- `X-Frame-Options: DENY`
+- `Referrer-Policy: strict-origin-when-cross-origin`
+
+## Discovery and disclosure
+
+`public/robots.txt` permits crawling and points to the sitemap. `public/llms.txt`
+provides product context for AI tools, while `public/ai.txt` describes crawler
+guidance (it is informational, not a replacement for robots.txt). `public/humans.txt`
+links to project contributors, and `public/ads.txt` declares no authorized ad sellers.
+`public/.well-known/security.txt` links to the private vulnerability reporting policy;
+review its expiry and contact regularly.
 
 ## Deployment
 

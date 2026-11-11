@@ -1,0 +1,14 @@
+# Browsershot
+
+> Browsershot is a free, open-source command-line tool for capturing web pages and browser state. It helps developers and coding agents visually inspect and verify web interfaces.
+
+It can capture screenshots of pages or elements, interact with pages, inspect elements, collect browser errors, and produce JSON for scripts and agents. It also supports authenticated captures, HTML output, and video recording.
+
+## Start here
+
+- [Browsershot website](https://browsershot.dev/): Overview and example workflows.
+- [Get started and reference](https://github.com/fayez-nazzal/browsershot#get-started): Installation, examples, and command reference.
+- [Source code](https://github.com/fayez-nazzal/browsershot): Project repository, issues, and contributions.
+- [Agent instructions](https://github.com/fayez-nazzal/browsershot/blob/main/AGENTS.md): Operational guidance for coding agents.
+- [License](https://github.com/fayez-nazzal/browsershot/blob/main/LICENSE): MIT license.
+- [Security policy](https://github.com/fayez-nazzal/browsershot/blob/main/SECURITY.md): Private vulnerability reporting.

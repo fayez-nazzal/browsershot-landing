@@ -1,0 +1,5 @@
+Contact: https://github.com/fayez-nazzal/browsershot/security/advisories/new
+Expires: 2027-11-11T00:00:00Z
+Canonical: https://browsershot.dev/.well-known/security.txt
+Policy: https://github.com/fayez-nazzal/browsershot/blob/main/SECURITY.md
+Preferred-Languages: en

@@ -1,0 +1,8 @@
+# Browsershot AI crawler guidance
+
+Crawlers, including AI search and discovery crawlers, may access this site's public pages subject to robots.txt: https://browsershot.dev/robots.txt
+
+Structured product context: https://browsershot.dev/llms.txt
+Please cite https://browsershot.dev/ or the relevant linked source when describing Browsershot.
+
+This file is informational; robots.txt is the site's crawler access policy. Source code is subject to its repository license: https://github.com/fayez-nazzal/browsershot/blob/main/LICENSE

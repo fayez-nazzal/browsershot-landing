@@ -1,0 +1,2 @@
+# No advertising systems are currently authorized to sell inventory for this site.
+placeholder.example.com, placeholder, DIRECT, placeholder
